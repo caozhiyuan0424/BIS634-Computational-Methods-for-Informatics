@@ -15,7 +15,7 @@ After that, I designed some testcase to check whether the code still works. The 
 
 ## Exercise 2
 
-1. The data has columns: name, age, weight, and eyecolor.
+1. The data has four columns: name, age, weight, and eyecolor.
 
 2. It has 152361 rows.
 
