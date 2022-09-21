@@ -5,7 +5,7 @@
 
 I have written the code for EX1 in jyupter notebook and test the code using the sample testcase. The result is shown below.
 
-![image-20220915171749439](/Users/caozhiyuan/desktop/BIS634-HW1/README_img/EX1_1.png)
+![image-20220915171749439](README_img/EX1_1.png)
 
 After that, I designed some testcase to check whether the code still works. The result is shown below. 
 
