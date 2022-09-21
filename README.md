@@ -111,7 +111,7 @@ After that, I designed some testcase to check whether the code still works. The 
 
 ## Exercise 4
 
-In this exercise, I read the XML file using Python. 
+In this exercise, I read the XML file using Python. The xml data is downloaded from https://nlmpubs.nlm.nih.gov/projects/mesh/MESH_FILES/xmlmesh/.
 
 1. The DescriptorName associated with DescriptorUI D007154 is "**Immune System Diseases**".
 
