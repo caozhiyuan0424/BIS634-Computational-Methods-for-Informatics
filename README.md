@@ -9,7 +9,7 @@ I have written the code for EX1 in jyupter notebook and test the code using the 
 
 After that, I designed some testcase to check whether the code still works. The result is shown below. 
 
-![image-20220915173000744](/Users/caozhiyuan/desktop/BIS634-HW1/README_img/EX1_2.png)
+![image-20220915173000744](README_img/EX1_2.png)
 
 
 
@@ -33,7 +33,7 @@ After that, I designed some testcase to check whether the code still works. The 
 
 4. Then the historgram of the data is plotted. The figute is shown below:
 
-   ![EX2_1](/Users/caozhiyuan/Desktop/BIS634-HW1/README_img/EX2_1.png)
+   ![EX2_1](README_img/EX2_1.png)
 
    Here, I choose the number of bins to be ***20***. This is because the age in this dataset mainly ranges from 0 to 100. Thus each bin stands for a range of 5 years. Besides, 20 bins are appropriate to have a clear and detailed visualization of the dataset. 
 
@@ -55,7 +55,7 @@ After that, I designed some testcase to check whether the code still works. The 
 
 7. Then the historgram of the data is plotted. The figute is shown below:
 
-   ![EX2_1](/Users/caozhiyuan/Desktop/BIS634-HW1/README_img/EX2_2.png)
+   ![EX2_1](README_img/EX2_2.png)
 
    Here, I still choose the number of bins to be ***20***, because 20 bins are appropriate to have a clear and detailed visualization of the dataset. Too much bins may seems crowded and hard to read, while too less bins may makes it difficult to observe the trend and distribution of the dataset. 
 
@@ -63,7 +63,7 @@ After that, I designed some testcase to check whether the code still works. The 
 
 8. The scatter plot is shown below:
 
-   ![EX2_1](/Users/caozhiyuan/Desktop/BIS634-HW1/README_img/EX2_3.png)
+   ![EX2_1](README_img/EX2_3.png)
 
 9. From the plot, we can observe that when age is smaller than 20, age and weight have a strong correlation with each other: The weight increases with the increase of age. After around 20 years old, the weight stablizes at aroung 60 - 85 kg. Also, people aged between 20 to 100 seems to have a larger standard deviation of weight. 
 
@@ -83,15 +83,15 @@ After that, I designed some testcase to check whether the code still works. The 
 
    - `plot_cases_bystate(['Connecticut', 'Washington'], 7)` gives:
 
-   ![EX3_1](/Users/caozhiyuan/Desktop/BIS634-HW1/README_img/EX3_1.png)
+   ![EX3_1](README_img/EX3_1.png)
 
    - `plot_cases_bystate(['Connecticut', 'Washington', 'New York', 'New Jersey', 'Massachusetts', 'Maryland'], 12)` gives:
 
-   ![EX3_2](/Users/caozhiyuan/Desktop/BIS634-HW1/README_img/EX3_2.png)
+   ![EX3_2](README_img/EX3_2.png)
 
    - `plot_cases_bystate(['Connecticut', 'Washington', 'Alabama'])` gives:
 
-   ![EX3_3](/Users/caozhiyuan/Desktop/BIS634-HW1/README_img/EX3_3.png)
+   ![EX3_3](README_img/EX3_3.png)
 
 3. However, the function has some limitations:
 
@@ -101,11 +101,11 @@ After that, I designed some testcase to check whether the code still works. The 
 
 4. After that, I wrote a function that takes the name of a state and returns the date of its highest number of new cases. The test cases are shown below.
 
-   ![EX3_4](/Users/caozhiyuan/Desktop/BIS634-HW1/README_img/EX3_4.png)
+   ![EX3_4](README_img/EX3_4.png)
 
 5. Finally, I wrote a function that takes the names of two states and reports which one had its highest number of **daily** **new** cases first and how many days separate that one's peak from the other one's peak. The test cases are shown below.
 
-   ![EX3_5](/Users/caozhiyuan/Desktop/BIS634-HW1/README_img/EX3_5.png)
+   ![EX3_5](README_img/EX3_5.png)
 
 
 
