@@ -322,10 +322,8 @@ plot_cases_bystate(['Connecticut', 'Washington', 'Alabama'])
 def highest_case(state):
     data = pd.read_csv("us-states.csv")
     state_data = data[data['state'] == state].copy()
-    state_data['new_cases'] = state_data['cases'].iloc[0]
-    state_data = state_data.reset_index()
-    for i in reversed(range(1,state_data.shape[0])):
-        state_data.loc[i, 'new_cases'] = state_data['cases'].loc[i] - state_data['cases'].loc[i-1]
+    a_new_case = np.diff(state_data['cases'])
+    state_data.insert(state_data.shape[1], column='new_cases', value=np.append(np.array(a_new_case[0]), a_new_case))
     return state_data.sort_values(by='new_cases',ascending=False)['date'].iloc[0]
 
 print(highest_case('Connecticut'))
