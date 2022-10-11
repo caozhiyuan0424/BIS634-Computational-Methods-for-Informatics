@@ -82,7 +82,7 @@ There are two main functions:
 
 Now, I will test my function ``give_suggestion``. I asked my implementation to spell-check "floeer" using 1e7 bits with different hash function(s).
 
-![image-20220929231551100](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX2_2.png)
+![image-20220929231551100](README_img/EX2_2.png)
 
 The above result is the same as the sample output. 
 
@@ -152,11 +152,11 @@ Next, I read the file "typos.json" and calculate the number of "good suggestions
 
 With all these data, the plot is shown below:
 
-![EX2_3](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX2_3.png)
+![EX2_3](README_img/EX2_3.png)
 
 However, the x-axis has a long range, which makes the graph crowded and overlapped. Thus I take logarithm transform to the x-axis. The result is shown below.
 
-![EX2_4](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX2_4.png)
+![EX2_4](README_img/EX2_4.png)
 
 From the figure, we can see that the number of good suggestions increase with the increase of bit number size of Bloom Filter. Also, by using more hash functions, the performance of suggestions will be better, because within the same filter size, the correctness of using all three hash function is better than using the first two, which is better than using only one hash function.  
 
@@ -190,19 +190,19 @@ Then, I wrote an ``add`` method so that elements can be added into the BST. Plea
 
 Next, I use some test cases to test my code. The result is shown below. 
 
-![EX3_1](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX3_1.png)
+![EX3_1](README_img/EX3_1.png)
 
 From the above test, our BST works as expected. 
 
 After that, I change the size *n* of the BST and see the runtime of ``in``. I range the size from *10* to *49000* and test the average runtime of  ``in`` function with 1000 random numbers. The plot is shown below.
 
-![EX3_2](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX3_2.png)
+![EX3_2](README_img/EX3_2.png)
 
 Considering the scale of its x-axis, the graph is almost horizontal. Hence, ``in`` is executing in O(log n) times.
 
 Finally, we test the time to setup the tree by varying the tree size *n*. I found that the curve lies between a curve that is O(n) and one that is O(n**2).
 
-![EX3_3](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX3_3.png)
+![EX3_3](README_img/EX3_3.png)
 
 Therefore the plot serves as a supporting evidence that the time to setup the tree is O(n log n) 
 
@@ -214,7 +214,7 @@ Therefore the plot serves as a supporting evidence that the time to setup the tr
 
 I did some test for these two algorithms. 
 
-![EX4_1](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX4_1.png)
+![EX4_1](README_img/EX4_1.png)
 
 From the test result, it is clear that what the algorithm do is to sort an array in an ascending order. In other words, my **hypothesis** is that both these two algorithms are sorting algorithms, one is bubble sort and another is merge sort. 
 
@@ -229,27 +229,27 @@ I range the size from 1 to 10,000 with **30** data points and use loglog plot to
 
 1. For ``data1``, the plot is shown below
 
-   ![EX4_2](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX4_2.png)
+   ![EX4_2](README_img/EX4_2.png)
 
    **Description**: It can be observed that when the size of the data is getting larger, the performance of ``alg2`` is much better then ``alg1``. In other words, considering the big-O scaling, ``alg1`` is much slower than ``alg2``. 
 
 2. For ``data2``, the plot is shown below
 
-   ![EX4_2](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX4_3.png)
+   ![EX4_2](README_img/EX4_3.png)
 
    **Description**: It can be observed that when the data is already sorted, the performance of ``alg1`` is much better than ``alg2``, because ``alg1`` will ends in one iteration, while ``alg2`` still go through the whole process.
 
 3. For ``data3``, the plot is shown below
 
-   ![EX4_2](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX4_4.png)
+   ![EX4_2](README_img/EX4_4.png)
 
    **Description**: It can be observed that when the data is in reversed, the performance of ``alg2`` is much better than ``alg2``, because in this case ``alg1`` is the slowest. It need to switch the order for pretty long times.
 
 **Discussion of above results**: I also plot the performance of algorithm in different dataset. As a result, ``alg1`` is good and only good at sorting data that is nearly sorted. ``alg2`` will have a stable performance regardless of how the data looks like. In conclusion, ``alg1`` is of O(n**2), while ``alg2`` is O(n\*logn).
 
-![EX4_5](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX4_5.png)
+![EX4_5](README_img/EX4_5.png)
 
-![EX4_6](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX4_6.png)
+![EX4_6](README_img/EX4_6.png)
 
 For an a arbitrary data, I will definitely choose **``alg2``** because regradless of how the data looks like, it has a **stable** performance which is already good enough. Besides, for arbitrary data, the possibility that it's nearly sorted is low, which means it is pretty difficult for ``alg1`` to have a better performance compared with ``alg2``. 
 **Explanation of parallelization of alg2**:
@@ -262,7 +262,7 @@ Please see my code for detailed implementation.
 
 Then I tested the performance of parallelized ``alg2``. The result is shown below.
 
-![EX4_7](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX4_7.png)
+![EX4_7](README_img/EX4_7.png)
 
 When the scale of size is small (i.e. smaller than 1e4 or 1e5), it takes some time for the ``Pool()`` to initialize. So the parallel version is slower than the normal one. But when the sclae becomes larger, things are what we expected: the parallel vesion is faster than normal version at roughly twice the speed. Specifically, we have:
 
