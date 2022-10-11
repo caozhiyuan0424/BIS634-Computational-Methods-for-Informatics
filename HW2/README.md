@@ -11,7 +11,7 @@ Problem with friend's method:
 
 1. (The main reason) Python actually **needs more than 4GB** to store all the weight data by list. This is because using a list typically needs to store an object's value, datatype and address and refnumber, which takes 32 types in total to store one object. The list also use 56 bytes of header. Thus It needs for more than 8GB of RAM to store all these data. See the figure for detail. 
 
-   <img src="/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX1_1.jpeg" alt="EX1_1" style="zoom:33%;" />
+   <img src="README_img/EX1_1.jpeg" alt="EX1_1" style="zoom:33%;" />
 2. The program is not able to use all the 8GB RAM. Some other background activities on the computer may takes some RAM. For example, the web browser, the Microsoft Word or some other applications takes some RAM and makes the RAM available for python smaller. For detailed RAM activities, my friend can open the "Activity Monitor" and see the allocation of RAM to different programs.
 3. Python is less "memory-efficient" than other programming languages. Python use Python Runtime Environment (PRE) to manage the memory that will not be used in the future and free the memory. In contrast, other languages such as C++ requires the programmer to free the memory themselves. PRE makes python uses more RAM [1]. Besides, when storing the same int number, python will use more space to store it. All these reasons makes it difficult for python to directly load the data. 
 
