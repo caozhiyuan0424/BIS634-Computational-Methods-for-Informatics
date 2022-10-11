@@ -57,7 +57,7 @@ Also, there are three hash function encapsulated in the class: ``my_hash``, ``my
 
 Then, I tested my code using the following code, the results are correct. 
 
-![image-20220929224708535](/Users/caozhiyuan/Desktop/BIS634-HW2/README_img/EX2_1.png)
+![image-20220929224708535](README_img/EX2_1.png)
 
 After that, I store the words in the Bloom Filter. To store the word, I define another class ``Spell_check``. In the initialization of ``Spell_check``, I read the file "words.txt" and store the words in the filter by the following codes. The following spelling correction process  will show that I store the words successfully here. 
 
