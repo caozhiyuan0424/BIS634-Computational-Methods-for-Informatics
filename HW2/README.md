@@ -243,7 +243,7 @@ I range the size from 1 to 10,000 with **30** data points and use loglog plot to
 
    ![EX4_2](README_img/EX4_4.png)
 
-   **Description**: It can be observed that when the data is in reversed, the performance of ``alg2`` is much better than ``alg2``, because in this case ``alg1`` is the slowest. It need to switch the order for pretty long times.
+   **Description**: It can be observed that when the data is in reversed, the performance of ``alg2`` is much better than ``alg1``, because in this case ``alg1`` is the slowest. It need to switch the order for pretty long times.
 
 **Discussion of above results**: I also plot the performance of algorithm in different dataset. As a result, ``alg1`` is good and only good at sorting data that is nearly sorted. ``alg2`` will have a stable performance regardless of how the data looks like. In conclusion, ``alg1`` is of O(n**2), while ``alg2`` is O(n\*logn).
 
