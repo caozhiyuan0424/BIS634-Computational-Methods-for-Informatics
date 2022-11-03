@@ -7,17 +7,17 @@
 
 I use the requests module as follows to acquire PMID of 1000 Alzheimers papers from 2022.
 
-![EX1_1](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX1_1.png)
+![EX1_1](README_img/EX1_1.png)
 
 Similarly I do the same for Cancer papers.
 
-![EX1_2](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX1_2.png)
+![EX1_2](README_img/EX1_2.png)
 
 ### Q2
 
 I save two json files as instructed. See my github file for detail. Part of the json file is as follows.
 
-![EX1_3](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX1_3.png)
+![EX1_3](README_img/EX1_3.png)
 
 For the abstract, if the article have multiple AbstractText fields, I store all the parts by simply concatenating with a space in between.  
 
@@ -48,7 +48,7 @@ I find that there is no overlap in the two sets of papers that I identified.
 
 I compute the SPECTER embedding of each paper in EX1 as follows. See my code for detail.
 
-![EX2_1](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX2_1.png)
+![EX2_1](README_img/EX2_1.png)
 
 ### Q2
 
@@ -99,17 +99,17 @@ embeddings_pca["query"] = [paper["query"] for paper in papers.values()]
 
 The result is 
 
-![EX2_2](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX2_2.png)
+![EX2_2](README_img/EX2_2.png)
 
 ### Q4
 
 Finally, I plot three scatter plots for PC0 vs PC1, PC0 vs PC2, and PC1 vs PC2. 
 
-![EX2_3](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX2_3.png)
+![EX2_3](README_img/EX2_3.png)
 
-![EX2_4](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX2_4.png)
+![EX2_4](README_img/EX2_4.png)
 
-![EX2_5](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX2_5.png)
+![EX2_5](README_img/EX2_5.png)
 
 **Comment**: PC0 vs. PC1 performs the best among these three graphs because it uses the principle components with the biggest two eignevalues. The two class are separated pretty far away. PC0 vs. PC1 preform worse than PC0 vs. PC2, but better than PC1 vs. PC2. Finally, PC1 vs. PC2 is the worst, and we can hardly tell one class from another. 
 
@@ -132,7 +132,7 @@ See my code for detailed implementation.
 
 By these initial values, the time course of the number of infected individuals are plotted below. 
 
-![EX3_1](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX3_1.png)
+![EX3_1](README_img/EX3_1.png)
 
 ### Q3
 
@@ -147,13 +147,13 @@ See my code for detailed implementation.
 
 After that, I vary $\beta$ and $\gamma$ to be different values ranging from 0.1 to 3 and 0.5 to 2 respectively. Then I plot on a heat map how the time of the peak of the infection depends on these two variables. The result is shown below
 
-![EX3_2](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX3_2.png)
+![EX3_2](README_img/EX3_2.png)
 
 ### Q5
 
 I do the same for the number of individuals infected at peak. The result is shown below.
 
-![EX3_3](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX3_3.png)
+![EX3_3](README_img/EX3_3.png)
 
 
 
@@ -204,11 +204,11 @@ I do not have to officially apply to get access to the data. These does not exis
 
 I plot some histograms:
 
-![EX4_1](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX4_1.png)
+![EX4_1](README_img/EX4_1.png)
 
-![EX4_2](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX4_2.png)
+![EX4_2](README_img/EX4_2.png)
 
-![EX4_3](/Users/caozhiyuan/Desktop/BIS634-HW3/README_img/EX4_3.png)
+![EX4_3](README_img/EX4_3.png)
 
 From these figures, I can observe that most cars have price lower than 100000. Most cars are purchased in 2014 or 2015. And the mileage tems to be less than 50000. 
 
