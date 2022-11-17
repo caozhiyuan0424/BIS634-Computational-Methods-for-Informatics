@@ -27,21 +27,21 @@ def find_minimum(a, b, delta=1e-4, step_len=0.1, stop_thres=1e-4):
     return (a, b, curr_error)
 ```
 
-**Explanation of derivative estimation**: I calculate the derivative of $$a$$ using the formula $$\displaystyle da = \frac{f(a+\Delta h) - f(a)}{\Delta h}$$. Here I set $$\Delta h$$ as $$1\times 10^{-4}$$ to approximate the derivative. For b, the derivative $$db$$ is calculated in the same way. 
+**Explanation of derivative estimation**: I calculate the derivative of $$a$$ using the formula $$\displaystyle da = \frac{f(a+h, b) - f(a, b)}{h}$$. Here I set $$h$$ as $$1\times 10^{-4}$$ to approximate the derivative. For b, the derivative $$db$$ is calculated in the same way. 
 
-**Explanation of numerical choices**: Besides setting $$\Delta h$$ as $$1\times 10^{-4}$$, I set the stopping criteria to be $$1\times 10^{-4}$$. Also, I set the step length of each iteration to be $0.1$. 
+**Explanation of numerical choices**: Besides setting $$h$$ as $$1\times 10^{-4}$$, I set the stopping criteria to be $$1\times 10^{-4}$$. Also, I set the step length of each iteration to be $0.1$. 
 
-**Justification**: $$\Delta$$ should be set as smaller as possible. After several trails, I think $$1\times 10^{-4}$$ has already met my requirements. For step length, a smaller step length will make the final result more accurate while the speed of algorithm will be slower. After several tests, I choose step length to be $$0.1$$ as a trade-off result. Finally, for stopping threshold, I choose $$1\times 10^{-4}$$ to balance the runtime and accuracy. By running the algorithm using different initial values of $$a$$ and $$b$$ and obtaining similar results in a reasonable running speed, I justify that my chioces are reasonable. 
+**Justification**: $$h$$ should be set as smaller as possible. After several trails, I think $$1\times 10^{-4}$$ has already met my requirements. For step length, a smaller step length will make the final result more accurate while the speed of algorithm will be slower. After several tests, I choose step length to be $$0.1$$ as a trade-off result. Finally, for stopping threshold, I choose $$1\times 10^{-4}$$ to balance the runtime and accuracy. By running the algorithm using different initial values of $$a$$ and $$b$$ and obtaining similar results in a reasonable running speed, I justify that my chioces are reasonable. 
 
 ### Local minimum and global minimum
 
 By vary $$a$$ and $$b$$ from $$0.1$$ to $$0.9$$ respectively and considering $$81$$ different initial cases, I obtain different local minimums. Part of the results are shown below
 
-![EX1_1](README_img/EX1_1.png)
+![EX1_1](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX1_1.png)
 
 Then I check these minimums. If the distance between two points $$(a_1, b_1)$$ and $$(a_2, b_2)$$ are close enough, i.e. the l2 norm of $$(a_1 - a_2,~b_1 - b_2)$$ is smaller than a threshold, I consider them as the same local minimum and keep the smaller one. After this filtering process, there is one local minimum and one golbal minimum left. 
 
-![EX1_2](README_img/EX1_2.png)
+![EX1_2](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX1_2.png)
 
 The local minimum is 1.10011345278 with the corresponding (a, b) = (0.2264713099998421, 0.6909504999995424). 
 
@@ -57,31 +57,31 @@ Then I visualize my result with a color-coded scatter plot using an appropriate 
 
 #### Results for k = 5
 
-![EX2_1](README_img/EX2_1.png)
+![EX2_1](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_1.png)
 
 **Variation for k = 5**:
 
-![EX2_4](README_img/EX2_4.png)
+![EX2_4](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_4.png)
 
 **Comments on diversity**: I plotted five graphs for k=5. From the results, I find that the initialization of centers do have an non-ignorable influence on the final result. For the American continent, algorithms will always split the points into two clusters. For the other continents, the clusters have more diversity. 
 
 #### Results for k = 7
 
-![EX2_2](README_img/EX2_2.png)
+![EX2_2](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_2.png)
 
 **Variation for k = 7**: 
 
-![EX2_5](README_img/EX2_5.png)
+![EX2_5](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_5.png)
 
 **Comments on diversity**: Similarly, I plotted five graphs for k=7. From the results, I find that the initialization of centers do have a larger influence on the final result. For the American continent, algorithms will always split the points into two or three clusters. For the other continents, the clusters have more diversity. 
 
 #### Results for k = 15
 
-![EX2_3](README_img/EX2_3.png)
+![EX2_3](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_3.png)
 
 **Variation for k = 15**: 
 
-![EX2_6](README_img/EX2_6.png)
+![EX2_6](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_6.png)
 
 **Comments on diversity**: Finally, I plotted five graphs for k=15. From the results, I find that the performance become worse when k turns to 15. Many of the clusters do not seems to be reasonable enough. Also, the clusters becomes more randomly distributed. 
 
@@ -114,9 +114,9 @@ I print the first 30 elements of Fibonacci sequence and find that the result goe
 
 Then I test the runtime of these two algorithms with different $$n$$. For ``Fibonacci``, I use $$n$$ from $$0$$ to $$43$$, because larger $$n$$ will make the runtime extremely slow, while for ``Fibonacci_cache``, I choose $$n$$ from $$0$$ to $$100$$, because Fibonacci_cache runs in a relatively constant and fast speed. Then I plot the graph of time vs. n. The result is shown below. 
 
-![EX3_1](README_img/EX3_1.png)
+![EX3_1](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX3_1.png)
 
-![EX3_2](README_img/EX3_2.png)
+![EX3_2](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX3_2.png)
 
 From the result, we can observe that after using lru_cache, the speed of modified ``Fibonacci_cache`` is much more faster than ``Fibonacci``, because ``Fibonacci_cache`` stores all the values in a dictionary which makes the whole process faster. 
 
@@ -128,21 +128,25 @@ I implemented the Smith-Waterman algorithm by scratch. See my code for details.
 
 I first test my code using ***'tgcatcgagaccctacgtgac'*** and ***'actagacctagcatcgac'*** with match=1, gap_penalty=1, mismatch_penalty=1. The result is shown below. 
 
-![EX4_1](README_img/EX4_1.png)
+![EX4_1](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_1.png)
 
 Then I test my code using ***'tgcatcgagaccctacgtgac'*** and ***'actagacctagcatcgac'*** but change the gap_penalty as 2, i.e. match=1, gap_penalty=2, mismatch_penalty=1. The result is shown below. 
 
-![EX4_2](README_img/EX4_2.png)
+![EX4_2](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_2.png)
 
 We can observe that the matrix becomes fainter.
 
 After that I test my code using ***'tgttacgg'*** and ***'ggttgacta'*** but change the gap_penalty as 2, i.e. match=3, gap_penalty=2, mismatch_penalty=3. The result is shown below. 
 
-![EX4_3](README_img/EX4_3.png)
+![EX4_3](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_3.png)
 
 Then I change the gap_penalty to be 100. The expected result is ***'gtt'***. 
 
-![EX4_4](README_img/EX4_4.png)
+![EX4_4](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_4.png)
+
+Finally I change match and gap penalty. The result is exactly what we expect. 
+
+![EX4_5](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_5.png)
 
 
 
@@ -425,13 +429,19 @@ def func_gap_j(seq_matrix, seq1, seq2, i, j, gap_penalty):
 # Generate the sequence matrix
 def gene_seq_matrix(seq1, seq2, match, gap_penalty, mismatch_penalty):
     seq_matrix = np.zeros((len(seq2)+1, len(seq1)+1))
+    direction_matrix = np.zeros((len(seq2)+1, len(seq1)+1), dtype='str')
+    direction_matrix.fill('e')
     for i, char1 in enumerate(seq2):
         for j, char2 in enumerate(seq1):
-            seq_matrix[i+1][j+1] = max(func_s(seq_matrix, seq1, seq2, i+1, j+1, match, mismatch_penalty), 
-                                       func_gap_i(seq_matrix, seq1, seq2, i+1, j+1, gap_penalty), 
-                                       func_gap_j(seq_matrix, seq1, seq2, i+1, j+1, gap_penalty), 
-                                       0)
-    return seq_matrix
+            potential_num = [func_s(seq_matrix, seq1, seq2, i+1, j+1, match, mismatch_penalty), 
+                             func_gap_i(seq_matrix, seq1, seq2, i+1, j+1, gap_penalty),
+                             func_gap_j(seq_matrix, seq1, seq2, i+1, j+1, gap_penalty), 
+                             0]
+            seq_matrix[i+1][j+1] = max(potential_num)
+            indx = np.argmax(potential_num)
+            num2dir = {0:'d', 1:'u', 2:'l', 3: 'e'}
+            direction_matrix[i+1][j+1] = num2dir[indx]
+    return seq_matrix, direction_matrix
 
 def find_maximum_indices(seq_matrix):
     max_val = seq_matrix.max()
@@ -443,18 +453,20 @@ def find_maximum_indices(seq_matrix):
     return max_indices
     
 # I only choose one case if multiple correct answers are encountered
-def trace_back(seq_matrix, i, j, seq1, seq2, match, gap_penalty, subseq1='', subseq2=''):
+def trace_back(seq_matrix, direction_matrix, i, j, seq1, seq2, subseq1='', subseq2=''):
     score = seq_matrix.max()
     if seq_matrix[i][j] == 0:
         return subseq1, subseq2, score
     else: 
-        if seq_matrix[i-1][j] - gap_penalty == seq_matrix[i][j]: # Item comes from (0, -1)
-            return trace_back(seq_matrix, i-1, j, seq1, seq2, match, gap_penalty, '-'+subseq1, seq2[i-1]+subseq2)
-        elif seq_matrix[i][j-1] - gap_penalty == seq_matrix[i][j]: # Item comes from (-1, 0)
-            return trace_back(seq_matrix, i, j-1, seq1, seq2, match, gap_penalty, seq1[j-1]+subseq1, '-'+subseq2)
+        if direction_matrix[i][j] == 'd':
+            return trace_back(seq_matrix, direction_matrix, i-1, j-1, seq1, seq2, seq1[j-1]+subseq1, seq2[i-1]+subseq2)
+        elif direction_matrix[i][j] == 'l':
+            return trace_back(seq_matrix, direction_matrix, i, j-1, seq1, seq2, seq1[j-1]+subseq1, '-'+subseq2)
+        elif direction_matrix[i][j] == 'u':
+            return trace_back(seq_matrix, direction_matrix, i-1, j, seq1, seq2, '-'+subseq1, seq2[i-1]+subseq2)
         else:
-            return trace_back(seq_matrix, i-1, j-1, seq1, seq2, match, gap_penalty, seq1[j-1]+subseq1, seq2[i-1]+subseq2)
-
+            return trace_back(seq_matrix, direction_matrix, i-1, j-1, seq1, seq2, seq1[j-1]+subseq1, seq2[i-1]+subseq2)
+        
 def plot_matrix(matrix, seq1, seq2):
     plt.xticks(range(len(seq1)), labels=seq1)
     plt.yticks(range(len(seq2)), labels=seq2)
@@ -463,9 +475,10 @@ def plot_matrix(matrix, seq1, seq2):
     
 
 def align(seq1, seq2, match=1, gap_penalty=1, mismatch_penalty=1):
-    seq_matrix = gene_seq_matrix(seq1, seq2, match, gap_penalty, mismatch_penalty)
+    seq_matrix, direction_matrix = gene_seq_matrix(seq1, seq2, match, gap_penalty, mismatch_penalty)
     plot_matrix(seq_matrix, seq1, seq2)
-    subseq1, subseq2, score = trace_back(seq_matrix, find_maximum_indices(seq_matrix)[0][0], find_maximum_indices(seq_matrix)[0][1], seq1, seq2, match, gap_penalty)
+    subseq1, subseq2, score = trace_back(seq_matrix, direction_matrix, find_maximum_indices(seq_matrix)[0][0], find_maximum_indices(seq_matrix)[0][1], seq1, seq2)
+    # subseq1, subseq2, score = trace_back(seq_matrix, find_maximum_indices(seq_matrix)[0][0], find_maximum_indices(seq_matrix)[0][1], seq1, seq2, match, gap_penalty)
     if (subseq1[0] == '-' or subseq2[0] == '-'):
         subseq1 = subseq1[1:]
         subseq2 = subseq2[1:]
