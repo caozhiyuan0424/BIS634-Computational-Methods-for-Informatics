@@ -37,11 +37,11 @@ def find_minimum(a, b, delta=1e-4, step_len=0.1, stop_thres=1e-4):
 
 By vary $$a$$ and $$b$$ from $$0.1$$ to $$0.9$$ respectively and considering $$81$$ different initial cases, I obtain different local minimums. Part of the results are shown below
 
-![EX1_1](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX1_1.png)
+![EX1_1](README_img/EX1_1.png)
 
 Then I check these minimums. If the distance between two points $$(a_1, b_1)$$ and $$(a_2, b_2)$$ are close enough, i.e. the l2 norm of $$(a_1 - a_2,~b_1 - b_2)$$ is smaller than a threshold, I consider them as the same local minimum and keep the smaller one. After this filtering process, there is one local minimum and one golbal minimum left. 
 
-![EX1_2](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX1_2.png)
+![EX1_2](README_img/EX1_2.png)
 
 The local minimum is 1.10011345278 with the corresponding (a, b) = (0.2264713099998421, 0.6909504999995424). 
 
@@ -57,31 +57,31 @@ Then I visualize my result with a color-coded scatter plot using an appropriate 
 
 #### Results for k = 5
 
-![EX2_1](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_1.png)
+![EX2_1](README_img/EX2_1.png)
 
 **Variation for k = 5**:
 
-![EX2_4](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_4.png)
+![EX2_4](README_img/EX2_4.png)
 
 **Comments on diversity**: I plotted five graphs for k=5. From the results, I find that the initialization of centers do have an non-ignorable influence on the final result. For the American continent, algorithms will always split the points into two clusters. For the other continents, the clusters have more diversity. 
 
 #### Results for k = 7
 
-![EX2_2](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_2.png)
+![EX2_2](README_img/EX2_2.png)
 
 **Variation for k = 7**: 
 
-![EX2_5](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_5.png)
+![EX2_5](README_img/EX2_5.png)
 
 **Comments on diversity**: Similarly, I plotted five graphs for k=7. From the results, I find that the initialization of centers do have a larger influence on the final result. For the American continent, algorithms will always split the points into two or three clusters. For the other continents, the clusters have more diversity. 
 
 #### Results for k = 15
 
-![EX2_3](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_3.png)
+![EX2_3](README_img/EX2_3.png)
 
 **Variation for k = 15**: 
 
-![EX2_6](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX2_6.png)
+![EX2_6](README_img/EX2_6.png)
 
 **Comments on diversity**: Finally, I plotted five graphs for k=15. From the results, I find that the performance become worse when k turns to 15. Many of the clusters do not seems to be reasonable enough. Also, the clusters becomes more randomly distributed. 
 
@@ -114,9 +114,9 @@ I print the first 30 elements of Fibonacci sequence and find that the result goe
 
 Then I test the runtime of these two algorithms with different $$n$$. For ``Fibonacci``, I use $$n$$ from $$0$$ to $$43$$, because larger $$n$$ will make the runtime extremely slow, while for ``Fibonacci_cache``, I choose $$n$$ from $$0$$ to $$100$$, because Fibonacci_cache runs in a relatively constant and fast speed. Then I plot the graph of time vs. n. The result is shown below. 
 
-![EX3_1](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX3_1.png)
+![EX3_1](README_img/EX3_1.png)
 
-![EX3_2](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX3_2.png)
+![EX3_2](README_img/EX3_2.png)
 
 From the result, we can observe that after using lru_cache, the speed of modified ``Fibonacci_cache`` is much more faster than ``Fibonacci``, because ``Fibonacci_cache`` stores all the values in a dictionary which makes the whole process faster. 
 
@@ -128,25 +128,25 @@ I implemented the Smith-Waterman algorithm by scratch. See my code for details.
 
 I first test my code using ***'tgcatcgagaccctacgtgac'*** and ***'actagacctagcatcgac'*** with match=1, gap_penalty=1, mismatch_penalty=1. The result is shown below. 
 
-![EX4_1](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_1.png)
+![EX4_1](README_img/EX4_1.png)
 
 Then I test my code using ***'tgcatcgagaccctacgtgac'*** and ***'actagacctagcatcgac'*** but change the gap_penalty as 2, i.e. match=1, gap_penalty=2, mismatch_penalty=1. The result is shown below. 
 
-![EX4_2](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_2.png)
+![EX4_2](README_img/EX4_2.png)
 
 We can observe that the matrix becomes fainter.
 
 After that I test my code using ***'tgttacgg'*** and ***'ggttgacta'*** but change the gap_penalty as 2, i.e. match=3, gap_penalty=2, mismatch_penalty=3. The result is shown below. 
 
-![EX4_3](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_3.png)
+![EX4_3](README_img/EX4_3.png)
 
 Then I change the gap_penalty to be 100. The expected result is ***'gtt'***. 
 
-![EX4_4](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_4.png)
+![EX4_4](README_img/EX4_4.png)
 
 Finally I change match and gap penalty. The result is exactly what we expect. 
 
-![EX4_5](/Users/caozhiyuan/Desktop/BIS634-HW4/README_img/EX4_5.png)
+![EX4_5](README_img/EX4_5.png)
 
 
 
