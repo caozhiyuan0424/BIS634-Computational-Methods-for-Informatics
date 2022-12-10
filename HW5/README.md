@@ -51,7 +51,7 @@ def acquire_data(t_size=.8):
 
 ### Scatterplot
 
-![E1_P1](/Users/caozhiyuan/Desktop/HW5/README_img/E1_P1.png)
+![E1_P1](README_img/E1_P1.png)
 
 This is the scatter plot for PC0 vs. PC1 for different rice type. 
 
@@ -83,11 +83,11 @@ I split the dataset by 80% vs. 20%. Then I normalize the data.
 
 ### Confusition matrix
 
-![E1_P2](/Users/caozhiyuan/Desktop/HW5/README_img/E1_P2.png)
+![E1_P2](README_img/E1_P2.png)
 
 This is the confusion matrix for k = 1.
 
-![E1_P3](/Users/caozhiyuan/Desktop/HW5/README_img/E1_P3.png)
+![E1_P3](README_img/E1_P3.png)
 
 This is the confusion matrix for k = 5.
 
@@ -164,21 +164,21 @@ Please see my code for details.
 
 Below are some pictures for my website.
 
-![E3_P1](/Users/caozhiyuan/Desktop/HW5/README_img/E3_P1.png)
+![E3_P1](README_img/E3_P1.png)
 
 You can either enter a state name in the first box (Note that the first letter of a word should be capitalized.) or select a state from the drop down box. If the state enetered is correct, the result will be shown:
 
-![E3_P2](/Users/caozhiyuan/Desktop/HW5/README_img/E3_P2.png)
+![E3_P2](README_img/E3_P2.png)
 
 Otherwise, you will be directed to an error page. 
 
-![E3_P3](/Users/caozhiyuan/Desktop/HW5/README_img/E3_P3.png)
+![E3_P3](README_img/E3_P3.png)
 
 ### Level-up function
 
 As an extension function, I desing a drop-down menu so that the user can choose a state rather than typing it. 
 
-![E3_P4](/Users/caozhiyuan/Desktop/HW5/README_img/E3_P4.png)
+![E3_P4](README_img/E3_P4.png)
 
 
 
